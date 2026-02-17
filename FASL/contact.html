@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact - FASL</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+        <header>
+      <div class="Skull">
+        <div class="logo-section">
+          <h1>FASL</h1>
+          <div class="P1">
+            <p>FOOTBALL AGENCY IN SIERRA LEONE</p>
+          </div>
+        </div>
+
+        <nav class="navigation">
+          <ul id="sideMenu" class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="players.html">PLAYERS</a></li>
+            <li><a href="matches.html">MATCHES</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html" class="active">CONTACT</a></li>
+            <i id="iconss" class="fa-solid fa-times" onclick="closemenu()"></i>
+          </ul>
+          <i id="iconss" class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="contact-hero">
+        <div class="container">
+          <h1>Contact FASL</h1>
+          <p>
+            Questions, enquiries or partnership proposals — we're here to help.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-container container">
+        <aside class="contact-form-card">
+          <h2>Send us a message</h2>
+          <p class="muted">We aim to reply within 48 hours.</p>
+
+          <!-- Replace action with your Formspree endpoint or server URL -->
+          <form
+            id="contactForm"
+            class="contact-form"
+            action="https://formspree.io/f/your-id"
+            method="POST"
+            novalidate
+          >
+            <label for="name">Full name</label>
+            <input
+              id="name"
+              name="name"
+              required
+              type="text"
+              placeholder="Your full name"
+            />
+
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              required
+              type="email"
+              placeholder="you@example.com"
+            />
+
+            <label for="subject">Subject</label>
+            <input
+              id="subject"
+              name="subject"
+              type="text"
+              placeholder="Reason for contact"
+            />
+
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows="6"
+              placeholder="Write your message here..."
+            ></textarea>
+
+            <button type="submit" class="cta-button">Send Message</button>
+            <p id="formNotice" aria-live="polite" class="form-notice"></p>
+          </form>
+        </aside>
+
+        <aside class="contact-info">
+          <div class="info-card">
+            <h3>Contact Details</h3>
+            <p>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@fasl.sl">info@fasl.sl</a>
+            </p>
+            <p>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+23278567890">+232 78 567 890</a>
+            </p>
+            <p><i class="fas fa-map-marker-alt"></i> Freetown, Sierra Leone</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Follow us</h3>
+            <div class="social-icons">
+              <a
+                href="https://facebook.com/fasl.sierraleone"
+                target="_blank"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://instagram.com/fasl_sierraleone"
+                target="_blank"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="mailto:info@fasl.sl" aria-label="Email"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="map-card">
+            <iframe
+              title="FASL location"
+              src="https://www.google.com/maps?q=Freetown%2C%20Sierra%20Leone&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="mailto:info@fasl.sl" target="_blank">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+23278567890" target="_blank">
+            <i class="fas fa-phone"></i>
+          </a>
+          <a href="https://facebook.com/fasl.sierraleone" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://instagram.com/fasl_sierraleone" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <p class="footer-text">
+          © 2024 FASL - Football Agency in Sierra Leone. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

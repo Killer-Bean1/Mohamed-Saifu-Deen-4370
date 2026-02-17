@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FASL</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="Skull">
+        <div class="logo-section">
+          <h1>FASL</h1>
+          <div class="P1">
+            <p>FOOTBALL AGENCY IN SIERRA LEONE</p>
+          </div>
+        </div>
+
+        <nav class="navigation">
+          <ul id="sideMenu" class="nav-links">
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="players.html">PLAYERS</a></li>
+            <li><a href="matches.html">MATCHES</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <i id="iconss" class="fa-solid fa-times" onclick="closemenu()"></i>
+          </ul>
+          <i id="iconss" class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main id="man">
+<section class="hero">
+      <div class="hero-slider">
+        <div class="slide active">
+          <img src="team.jpg" alt="FASL Team">
+          <div class="slide-content">
+            <h2>FOOTBALL AGENCY IN SIERRA LEONE</h2>
+            <p>Discovering and developing young football talent across the country</p>
+            <a href="about.html" class="cta-button">LEARN MORE</a>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="team2.jpg" alt="FASL Training">
+          <div class="slide-content">
+            <h2>PROFESSIONAL TRAINING</h2>
+            <p>Structured pathways and meaningful opportunities for young footballers</p>
+            <a href="players.html" class="cta-button">VIEW PLAYERS</a>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="play.jpg" alt="FASL Matches">
+          <div class="slide-content">
+            <h2>COMPETITIVE EXPOSURE</h2>
+            <p>Creating opportunities locally and internationally</p>
+            <a href="matches.html" class="cta-button">SEE MATCHES</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="slider-controls">
+        <button class="prev-btn">&lt;</button>
+        <button class="next-btn">&gt;</button>
+        <div class="slider-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+        </div>
+      </div>
+    </section>
+
+       <section id="Report">
+      <div class="Report_1">
+        <p><strong>SLBC</strong></p>
+        <p>
+          FASL has already supported several athletes in securing trials
+          with premier league clubs, including FC Kallon and East
+          End Lions. <br>Community stakeholders describe the initiative as “a
+          major boost” to youth football development in Sierra Leone.
+        </p>
+      </div>
+
+      <div class="Report_1">
+        <p><strong>AYV</strong></p>
+        <p>
+          FASL has organized showcase tournaments that attracted attention
+          from both local coaches and international scouts. Parents and
+          local coaches applaud the agency for offering structured
+          <br />pathways and meaningful opportunities for young
+          footballers across the country.
+        </p>
+      </div>
+
+      <div class="Report_1">
+        <p><strong>AMAZE TV</strong></p>
+        <p>
+          Amaze TV Sports highlights the growing impact of the Football
+          Agency in Sierra Leone (FASL), calling it “one of the fastest
+          rising platforms for football talent.” <br>The agency continues to
+          support youth players with mentorship, training sessions,
+          and exposure to high level competitions.
+        </p>
+      </div>
+    </section>
+
+    <section class="video-highlight container">
+      <div class="video-wrapper">
+        <video
+          id="highlightVideo"
+          src="highlight.mp4"
+          playsinline
+          autoplay
+          muted
+          loop
+          preload="metadata"
+        ></video>
+      </div>
+      <p class="video-caption">
+        Watch our latest highlights from training & matches.
+      </p>
+    </section>
+</main>
+ <footer>
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="mailto:info@fasl.sl" target="_blank">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+23278567890" target="_blank">
+            <i class="fas fa-phone"></i>
+          </a>
+          <a href="https://facebook.com/fasl.sierraleone" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://instagram.com/fasl_sierraleone" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <p class="footer-text">
+          © 2024 FASL - Football Agency in Sierra Leone. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    
+  <script src="main.js"></script>
+  </body>
+</html>

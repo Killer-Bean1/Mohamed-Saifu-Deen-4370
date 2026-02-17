@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matches - FASL</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="Skull">
+        <div class="logo-section">
+          <h1>FASL</h1>
+          <div class="P1">
+            <p>FOOTBALL AGENCY IN SIERRA LEONE</p>
+          </div>
+        </div>
+
+        <nav class="navigation">
+          <ul id="sideMenu" class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="players.html">PLAYERS</a></li>
+            <li><a href="matches.html" class="active">MATCHES</a></li>
+            <li><a href="about.html" >ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <i id="iconss" class="fa-solid fa-times" onclick="closemenu()"></i>
+          </ul>
+          <i id="iconss" class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="matches-section">
+        <div class="matches-hero">
+          <h1>MATCHES</h1>
+          <p>Latest results and upcoming fixtures</p>
+        </div>
+
+        <div class="matches-tabs">
+          <button class="tab-button active" data-tab="results">RESULTS</button>
+          <button class="tab-button" data-tab="fixtures">FIXTURES</button>
+        </div>
+
+        <div class="matches-content active" id="results">
+          <div class="match-card">
+            <div class="match-header">
+              <span class="match-date">December 1, 2024</span>
+              <span class="match-competition">PREMIER LEAGUE</span>
+            </div>
+            <div class="match-teams">
+              <div class="team">
+                <div class="team-name">East End Lions</div>
+                <div class="team-score">2</div>
+              </div>
+              <div class="team">
+                <div class="team-name">FC Kallon</div>
+                <div class="team-score">1</div>
+              </div>
+            </div>
+            <div class="match-status">Full Time</div>
+          </div>
+
+          <div class="match-card">
+            <div class="match-header">
+              <span class="match-date">November 28, 2024</span>
+              <span class="match-competition">PREMIER LEAGUE</span>
+            </div>
+            <div class="match-teams">
+              <div class="team">
+                <div class="team-name">Bo Rangers</div>
+                <div class="team-score">3</div>
+              </div>
+              <div class="team">
+                <div class="team-name">Limkokwing F.C</div>
+                <div class="team-score">0</div>
+              </div>
+            </div>
+            <div class="match-status">Full Time</div>
+          </div>
+
+          <div class="match-card">
+            <div class="match-header">
+              <span class="match-date">November 25, 2024</span>
+              <span class="match-competition">FA CUP</span>
+            </div>
+            <div class="match-teams">
+              <div class="team">
+                <div class="team-name">FASL Academy</div>
+                <div class="team-score">2</div>
+              </div>
+              <div class="team">
+                <div class="team-name">Diamond Stars</div>
+                <div class="team-score">2</div>
+              </div>
+            </div>
+            <div class="match-status">Full Time (Penalties: 4-2)</div>
+          </div>
+
+          <div class="match-card">
+            <div class="match-header">
+              <span class="match-date">November 20, 2024</span>
+              <span class="match-competition">PREMIER LEAGUE</span>
+            </div>
+            <div class="match-teams">
+              <div class="team">
+                <div class="team-name">East End Lions</div>
+                <div class="team-score">1</div>
+              </div>
+              <div class="team">
+                <div class="team-name">Bo Rangers</div>
+                <div class="team-score">1</div>
+              </div>
+            </div>
+            <div class="match-status">Full Time</div>
+          </div>
+        </div>
+
+        <div class="matches-content" id="fixtures">
+          <div class="match-card">
+            <div class="match-header">
+              <span class="match-date">December 8, 2024</span>
+              <span class="match-competition">PREMIER LEAGUE</span>
+            </div>
+            <div class="match-teams">
+              <div class="team">
+                <div class="team-name">FC Kallon</div>
+                <div class="team-score">vs</div>
+              </div>
+              <div class="team">
+                <div class="team-name">Limkokwing F.C</div>
+                <div class="team-score">vs</div>
+              </div>
+            </div>
+            <div class="match-status">15:00 • National Stadium</div>
+          </div>
+
+          <div class="match-card">
+            <div class="match-header">
+              <span class="match-date">December 12, 2024</span>
+              <span class="match-competition">PREMIER LEAGUE</span>
+            </div>
+            <div class="match-teams">
+              <div class="team">
+                <div class="team-name">Bo Rangers</div>
+                <div class="team-score">vs</div>
+              </div>
+              <div class="team">
+                <div class="team-name">East End Lions</div>
+                <div class="team-score">vs</div>
+              </div>
+            </div>
+            <div class="match-status">16:00 • Bo Stadium</div>
+          </div>
+
+          <div class="match-card">
+            <div class="match-header">
+              <span class="match-date">December 15, 2024</span>
+              <span class="match-competition">FA CUP</span>
+            </div>
+            <div class="match-teams">
+              <div class="team">
+                <div class="team-name">FASL Academy</div>
+                <div class="team-score">vs</div>
+              </div>
+              <div class="team">
+                <div class="team-name">Diamond Stars</div>
+                <div class="team-score">vs</div>
+              </div>
+            </div>
+            <div class="match-status">14:30 • Freetown Ground</div>
+          </div>
+
+          <div class="match-card">
+            <div class="match-header">
+              <span class="match-date">December 20, 2024</span>
+              <span class="match-competition">PREMIER LEAGUE</span>
+            </div>
+            <div class="match-teams">
+              <div class="team">
+                <div class="team-name">Limkokwing F.C</div>
+                <div class="team-score">vs</div>
+              </div>
+              <div class="team">
+                <div class="team-name">FC Kallon</div>
+                <div class="team-score">vs</div>
+              </div>
+            </div>
+            <div class="match-status">15:30 • National Stadium</div>
+          </div>
+
+          <div class="match-card">
+            <div class="match-header">
+              <span class="match-date">December 25, 2024</span>
+              <span class="match-competition">EXHIBITION</span>
+            </div>
+            <div class="match-teams">
+              <div class="team">
+                <div class="team-name">FASL Select XI</div>
+                <div class="team-score">vs</div>
+              </div>
+              <div class="team">
+                <div class="team-name">International Guests</div>
+                <div class="team-score">vs</div>
+              </div>
+            </div>
+            <div class="match-status">10:00 • FASL Academy Ground</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="mailto:info@fasl.sl" target="_blank">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+23278567890" target="_blank">
+            <i class="fas fa-phone"></i>
+          </a>
+          <a href="https://facebook.com/fasl.sierraleone" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://instagram.com/fasl_sierraleone" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <p class="footer-text">© 2024 FASL - Football Agency in Sierra Leone. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

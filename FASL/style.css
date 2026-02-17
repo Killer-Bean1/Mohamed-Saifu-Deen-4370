@@ -1,0 +1,945 @@
+/* =================================================================
+   MODERN FASL WEBSITE STYLES
+   =================================================================
+   This stylesheet contains the complete redesign of the FASL website
+   with modern styling, responsive design, and enhanced user experience.
+   
+   KEY CHANGES:
+   1. CSS Variables for consistent theming
+   2. Modern navigation with mobile hamburger menu
+   3. Hero slider with smooth transitions
+   4. Card-based layouts for all content sections
+   5. Responsive design for all screen sizes
+   6. Enhanced typography and spacing
+   7. Professional footer with social media integration
+   ================================================================= */
+
+/* =================================================================
+   CSS VARIABLES - THEME CONFIGURATION
+   =================================================================
+   Using CSS custom properties (variables) allows for easy theme management
+   and consistent color usage throughout the website. This makes it simple
+   to change the entire color scheme by modifying just these variables.
+   ================================================================= */
+:root {
+    --primary-color: #E1AA36;
+    /* Gold accent color for branding */
+    --secondary-color: #1a1a2e;
+    /* Dark blue for header background */
+    --accent-color: #0f3460;
+    /* Medium blue for gradients */
+    --text-light: #ffffff;
+    /* White text for dark backgrounds */
+    --text-dark: #333333;
+    /* Dark text for light backgrounds */
+    --bg-light: #EAF4F4;
+    /* Light background for main content */
+    --bg-dark: #16213e;
+    /* Dark background for header */
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Standard shadow */
+    --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
+    /* Enhanced shadow for hover */
+}
+
+/* =================================================================
+   BASE STYLES & RESET
+   =================================================================
+   Basic reset and body styling with modern font integration.
+   The background uses a subtle gradient for visual interest.
+   ================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Ensures padding doesn't affect total width */
+}
+
+body {
+    background: linear-gradient(135deg, var(--bg-light) 0%, #d4e8e8 100%);
+    font-family: "Special Gothic Condensed One", sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+    /* Prevents horizontal scroll on mobile */
+}
+
+/* =================================================================
+   MODERN NAVIGATION HEADER
+   =================================================================
+   Complete redesign of the navigation with:
+   - Dark gradient background for professional look
+   - Sticky positioning for constant access
+   - Backdrop blur for modern glass effect
+   - Responsive hamburger menu for mobile devices
+   ================================================================= */
+header {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--bg-dark) 50%, var(--accent-color) 100%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    /* Stays at top when scrolling */
+    top: 0;
+    z-index: 1000;
+    /* Ensures header stays above other content */
+    backdrop-filter: blur(10px);
+    /* Modern glass effect */
+}
+
+.Skull {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* =================================================================
+   LOGO SECTION
+   =================================================================
+   Grouped logo and tagline for better organization.
+   The h1 uses gradient text effect for modern appearance.
+   ================================================================= */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+h1 {
+    font-family: "Special Gothic Condensed One", sans-serif;
+    font-weight: 800;
+    font-style: oblique;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Gradient text effect - modern alternative to solid color */
+    background: linear-gradient(45deg, var(--primary-color), #f4d03f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.P1 {
+    font-size: 0.9rem;
+    font-family: "Special Gothic Condensed One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-light);
+    text-align: left;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+/* =================================================================
+   MOBILE HAMBURGER MENU
+   =================================================================
+   Three-line hamburger icon that transforms to X when active.
+   Only visible on mobile devices (display: none on desktop).
+   Smooth transitions for professional feel.
+   ================================================================= */
+
+
+
+
+/* .hamburger {
+    display: none;
+    /* Hidden on desktop, shown on mobile */
+    /* flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+} */
+
+/* .hamburger span {
+    width: 25px;
+    height: 5px;
+    background: var(--primary-color);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+/* } */ 
+
+/* Animation to transform hamburger to X */
+/* .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+} */
+
+/* .hamburger.active span:nth-child(2) {
+    opacity: 0;
+} */
+
+/* .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+} */
+
+/* =================================================================
+   NAVIGATION LINKS
+   =================================================================
+   Modern navigation with:
+   - Hover effects with sliding highlight
+   - Active state styling
+   - Smooth transitions
+   - Mobile responsive behavior
+   ================================================================= */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    font-family: "Special Gothic Condensed One", sans-serif;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Sliding highlight effect on hover */
+li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(225, 170, 54, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+li a:hover::before {
+    left: 100%;
+    /* Slides across the button */
+}
+
+li a:hover {
+    color: var(--primary-color);
+    background: rgba(225, 170, 54, 0.1);
+    transform: translateY(-1px);
+    /* Lifts up on hover */
+    box-shadow: 0 4px 15px rgba(225, 170, 54, 0.3);
+}
+
+/* Active page styling */
+li a.active {
+    color: var(--text-dark);
+    background: var(--primary-color);
+}
+
+/* =================================================================
+   HERO SLIDER STYLES
+   =================================================================
+   Professional image slider with:
+   - Full viewport height
+   - Smooth fade transitions
+   - Overlay content with backdrop blur
+   - Responsive design
+   ================================================================= */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    /* 80% of viewport height */
+    overflow: hidden;
+    background: var(--secondary-color);
+}
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    /* Smooth fade transition */
+}
+
+.slide.active {
+    opacity: 1;
+    /* Only active slide is visible */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Covers entire area without distortion */
+}
+
+/* =================================================================
+   SLIDE CONTENT OVERLAYS
+   =================================================================
+   Text content overlaid on images with:
+   - Semi-transparent background for readability
+   - Backdrop blur for modern glass effect
+   - Centered positioning
+   - Responsive sizing
+   ================================================================= */
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Perfect centering */
+    text-align: center;
+    color: var(--text-light);
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent black */
+    padding: 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    /* Modern glass effect */
+    max-width: 600px;
+    border: 1px solid rgba(225, 170, 54, 0.3);
+    /* Subtle gold border */
+}
+
+.slide-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slide-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* =================================================================
+   CALL-TO-ACTION BUTTONS
+   =================================================================
+   Modern CTA buttons with:
+   - Gradient backgrounds
+   - Hover animations
+   - Shadow effects
+   - Uppercase styling for emphasis
+   ================================================================= */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--primary-color), #d4a026);
+    color: var(--text-dark);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(225, 170, 54, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    /* Lifts up on hover */
+    box-shadow: 0 8px 25px rgba(225, 170, 54, 0.5);
+    /* Enhanced shadow */
+}
+
+/* =================================================================
+   SLIDER CONTROLS
+   =================================================================
+   Navigation controls for the slider:
+   - Previous/Next buttons with hover effects
+   - Dot indicators for direct slide access
+   - Positioned at bottom center
+   - Glass effect styling
+   ================================================================= */
+.slider-controls {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 3;
+}
+
+.prev-btn,
+.next-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background: var(--primary-color);
+    color: var(--text-dark);
+    transform: scale(1.1);
+    /* Grows on hover */
+}
+
+.slider-dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--primary-color);
+    transform: scale(1.3);
+    /* Larger when active */
+}
+
+.dot:hover {
+    background: rgba(225, 170, 54, 0.7);
+}
+
+/* =================================================================
+   ABOUT PAGE STYLES
+   =================================================================
+   Professional about page with:
+   - Hero section with animated background
+   - Grid layout for information cards
+   - Consistent styling with rest of site
+   ================================================================= */
+.about-section {
+    padding: 5rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-hero {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: var(--text-light);
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated background effect for hero section */
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(225, 170, 54, 0.1) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Grid layout for about content cards */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2-column grid */
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.about-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gold accent line at top of cards */
+.about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), #f4d03f);
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.about-card h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.about-card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+/* =================================================================
+   PLAYERS PAGE STYLES
+   =================================================================
+   Modern players page with:
+   - Card-based grid layout
+   - Hover effects with image zoom
+   - Position badges and player details
+   - Responsive grid that adapts to screen size
+   ================================================================= */
+.players-section {
+    padding: 5rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.players-hero {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: var(--text-light);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Responsive grid for player cards */
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.player-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Overlay effect on hover */
+.player-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(225, 170, 54, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.player-card:hover::before {
+    opacity: 1;
+}
+
+.player-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.player-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Image zoom effect on hover */
+.player-card:hover .player-image {
+    transform: scale(1.05);
+}
+
+.player-info {
+    padding: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.player-name {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.player-details {
+    font-size: 1rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Position badge styling */
+.player-position {
+    background: var(--primary-color);
+    color: var(--text-dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+/* =================================================================
+   MATCHES PAGE STYLES
+   =================================================================
+   Professional matches page with:
+   - Tab-based interface for Results/Fixtures
+   - Match cards with team information
+   - Competition badges and status indicators
+   - Clean, organized layout
+   ================================================================= */
+.matches-section {
+    padding: 5rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.matches-hero {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: var(--text-light);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Tab navigation for Results/Fixtures */
+.matches-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.tab-button {
+    background: white;
+    color: var(--text-dark);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.tab-button.active {
+    background: var(--primary-color);
+    color: var(--text-dark);
+    transform: translateY(-2px);
+}
+
+.tab-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Tab content visibility control */
+.matches-content {
+    display: none;
+}
+
+.matches-content.active {
+    display: block;
+}
+
+/* Individual match card styling */
+.match-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.match-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.match-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--bg-light);
+}
+
+.match-date {
+    font-size: 1rem;
+    color: #666;
+}
+
+.match-competition {
+    background: var(--primary-color);
+    color: var(--text-dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* Team vs team layout */
+.match-teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.team {
+    text-align: center;
+    flex: 1;
+}
+
+.team-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.team-score {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.match-status {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* =================================================================
+   FOOTER STYLES
+   =================================================================
+   Professional footer with:
+   - Dark gradient background matching header
+   - Social media icons with hover effects
+   - Consistent styling across all pages
+   ================================================================= */
+footer {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: var(--text-light);
+    padding: 3rem 5%;
+    margin-top: 5rem;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Social media icon styling */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.social-icons a:hover {
+    background: var(--primary-color);
+    color: var(--text-dark);
+    transform: translateY(-3px);
+    border-color: var(--primary-color);
+}
+
+.footer-text {
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+/* Video highlight section */
+.video-highlight {
+    padding: 2rem 5%;
+    max-width: 1400px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.video-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    display: block;
+    object-fit: cover;
+}
+
+/* Caption below video */
+.video-caption {
+    margin-top: 0.75rem;
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* =================================================================
+   REPORT SECTION (Home Page)
+   =================================================================
+   Enhanced report section with:
+   - Card-based layout for media mentions
+   - Hover effects and shadows
+   - Professional styling
+   ================================================================= */
+#Report {
+    padding: 4rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.Report_1 {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Report_1:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.Report_1 p:first-child {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.Report_1 p:last-child {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+/* =================================================================
+   RESPONSIVE DESIGN
+   =================================================================
+   Mobile-first responsive design with breakpoints:
+   - 768px: Tablets and smaller
+   - 480px: Mobile phones
+   
+   Key responsive changes:
+   - Hamburger menu activation
+   - Grid layout adjustments
+   - Font size reductions
+   - Padding and margin optimizations
+   ================================================================= */
+
+
+nav #iconss{
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+
+    nav #iconss{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .nav-links{
+            display: block;
+            background: #1a1a2e;
+            width: 200px;
+            height: 80vh;
+            position: fixed;
+            top: 0;
+            right: -200px;
+            padding-top: 50px;
+            z-index: 1000;
+        }
+
+        nav .nav-links li{
+            display: block;
+            margin: 25px;
+            padding: 0 25px;
+        }
+
+        nav .nav-links #iconss{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+}
